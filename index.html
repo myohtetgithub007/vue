@@ -17,6 +17,8 @@
   </ul>
   <button v-on:click="addOne()">count</button>
   {{count}}
+
+  <p v-if="isEven">Good Morning</p>
 </div>
 <!-- vue data bilnding -->
 
@@ -43,5 +45,12 @@
         this.count = this.count + 1;
       },
     },
+    computed: {
+      isEven() {
+        return this.count % 2 == 0;
+      },
+    },
   });
 </script>
+
+<!-- is computed is used for condition checked ui -->

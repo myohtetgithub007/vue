@@ -1,0 +1,21 @@
+<div id="app">{{name}}</div>
+<div id="language">{{pro}}</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+  var app = new Vue({
+    el: "#app",
+    data: function () {
+      return {
+        name: "myo htet",
+      };
+    },
+  });
+  var language = new Vue({
+    el: "#language",
+    data: function () {
+      return {
+        pro: "Vue Js Learning",
+      };
+    },
+  });
+</script>

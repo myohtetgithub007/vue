@@ -1,5 +1,9 @@
-<div id="app">{{name}}</div>
-<div id="language">{{pro}}</div>
+<div id="app">
+  <p>{{`I am ${name} is ${age} year old`}}</p>
+  {{like?"Liked":"Not Likerd"}}
+</div>
+<!-- vue expression -->
+
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script>
   var app = new Vue({
@@ -7,14 +11,8 @@
     data: function () {
       return {
         name: "myo htet",
-      };
-    },
-  });
-  var language = new Vue({
-    el: "#language",
-    data: function () {
-      return {
-        pro: "Vue Js Learning",
+        age: 25,
+        like: true,
       };
     },
   });

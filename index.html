@@ -15,6 +15,8 @@
   <ul>
     <li v-for="(f,index) in fruit1" :key="index">{{f}}</li>
   </ul>
+  <button v-on:click="addOne()">count</button>
+  {{count}}
 </div>
 <!-- vue data bilnding -->
 
@@ -33,7 +35,13 @@
         fruit: "mango",
         manga: "",
         fruit1: ["mango", "apple", "orange", "banana"],
+        count: 0,
       };
+    },
+    methods: {
+      addOne() {
+        this.count = this.count + 1;
+      },
     },
   });
 </script>
